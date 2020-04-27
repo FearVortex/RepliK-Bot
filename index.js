@@ -1,18 +1,18 @@
-const {Client, RichEmbed} = require('discord.js');
+const {Client, RichEmbed} = require('discord.js')
 
-const bot = new Client();
+const bot = new Client()
 
-const ping = require('minecraft-server-util');
+const ping = require('minecraft-server-util')
 
-const PREFIX = '$';
+const PREFIX = '$'
 
 bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+  console.log(`Logged in as ${bot.user.tag}!`)
 })
 
 bot.on('message', msg => {
   
-let args = Message.content.client.substring(PREFIX.lenght).split(' ');
+let args = Message.content.client.substring(PREFIX.lenght).split(' ')
   
   switch(args[0]){
     case 'play':
@@ -27,10 +27,10 @@ let args = Message.content.client.substring(PREFIX.lenght).split(' ');
         .addField('Max Players' , reponse.maxPlayers)
           message.channel.send(Embed)
       })
-          break
+  break
 
 
       
   }
-  bot.login(process.env.BOT_TOKEN);
+  bot.login(process.env.BOT_TOKEN)
 })
